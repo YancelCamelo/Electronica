@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intento de pagina Web :)</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        /* Encabezados con colores vivos */
+        h1 {
+            color: #ff4757; /* Rojo vibrante */
+            text-align: center;
+            border-bottom: 4px solid #ffa502;
+            padding-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        h2, h3 {
+            color: #2f3542;
+            background: #eccc68;
+            padding: 10px;
+            border-left: 5px solid #ff7f50;
+            border-radius: 5px;
+        }
+
+        /* Estilo para las fórmulas */
+        .formula-box {
+
+            background-color: #fff;
+            padding: 15px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .formula-box p {
+            margin: 5px 0;
+        }
+
+        /* Párrafos */
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Leyes de la Electricidad</h1>
+        
+        <h2>Ley de Ohm</h2>
+        <p>Postulada por <strong>Georg Simon Ohm</strong>, establece que la intensidad de la corriente eléctrica que circula por un conductor es directamente proporcional al voltaje aplicado e inversamente proporcional a la resistencia del mismo.</p>
+
+        <div class="formula-box">
+            <p>V = I * R</p>
+            <p>I = V / R</p>
+            <p>R = V / I</p>
+        </div>
+
+        <div class="watt-section">
+            <h3>Ley de Watt</h3>
+            <p>La ley de Watt establece que la potencia eléctrica consumida por un componente es directamente proporcional al voltaje aplicado y a la intensidad de corriente que circula por él.</p>
+            <div class="formula-box" style="background-color: #fff; color: #333;">
+                <p>P = V * I</p>
+            </div>
+            <p>La potencia se mide en <strong>vatios (W)</strong>, siendo fundamental para calcular el consumo energético y dimensionar circuitos.</p>
+        </div>
+    </div>
+
+</body>
+</html>
