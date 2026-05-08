@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de Electrónica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <h2>Índice</h2>
+        <ul>
+            <li><a href="#fase1">Fase 1: Conceptos</a></li>
+            <li><a href="#fase2">Fase 2: Reflexión</a></li>
+            <li><a href="#fase3">Fase 3: Aplicación</a></li>
+            <li><a href="#fase4">Fase 4: Analogía</a></li>
+            <li><a href="#fase5">Fase 5: Predicción</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <header>
+            <h1>Fundamentos de Electrónica</h1>
+            <p>Objetivo: Comprender conceptos básicos mediante análisis y aplicación.</p>
+        </header>
+
+        <section id="fase1" class="card">
+            <h2>Fase 1: Exploración de Conceptos</h2>
+            <div class="concept">
+                <h3>Ánodo y Cátodo</h3>
+                <p><strong>¿Qué es?</strong> El ánodo es el terminal de entrada de corriente y el cátodo el de salida.</p>
+                <p><strong>Símbolo:</strong> A (+) y K (-)</p>
+                <div class="img-placeholder">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=300&q=80" alt="Componentes electrónicos">
+                </div>
+            </div>
+
+            <div class="concept">
+                <h3>Magnitudes Eléctricas</h3>
+                <ul>
+                    <li><strong>Voltaje (V):</strong> Tensión o diferencia de potencial.</li>
+                    <li><strong>Corriente (I):</strong> Intensidad del flujo de electrones.</li>
+                    <li><strong>Resistencia (R):</strong> Oposición al flujo eléctrico.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="fase2" class="card">
+            <h2>Fase 2: Análisis y Reflexión</h2>
+            <div class="question">
+                <p><strong>¿Por qué los electrones necesitan energía para moverse?</strong></p>
+                <p>Para vencer la resistencia propia del material y establecer un flujo ordenado.</p>
+            </div>
+            <div class="question">
+                <p><strong>Diferencia entre electricidad y electrónica:</strong></p>
+                <p>La electricidad aprovecha la energía, la electrónica controla el flujo de información y señales.</p>
+            </div>
+        </section>
+
+        <section id="fase3" class="card">
+            <h2>Fase 3: Aplicación (El Cargador)</h2>
+            <p>Al conectar un celular, el cargador transforma el voltaje de 110V/220V a 5V.</p>
+            <div class="interactive-info" id="cargador-info" style="cursor:pointer; padding: 15px; border: 1px dashed var(--primary); border-radius: 8px;">
+                Haz clic aquí para ver qué magnitud cambia.
+            </div>
+        </section>
+
+        <section id="fase4" class="card">
+            <h2>Fase 4: Analogía de la Tubería</h2>
+            <div class="analogía-container">
+                <p><strong>Voltaje:</strong> Presión del agua.</p>
+                <p><strong>Corriente:</strong> Caudal (cuánta agua pasa).</p>
+                <p><strong>Resistencia:</strong> Diámetro del tubo (qué tan estrecho es).</p>
+            </div>
+        </section>
+
+        <section id="fase5" class="card">
+            <h2>Fase 5: Simulación de Circuito</h2>
+            <p>Estado del circuito: <strong id="status" style="color: #c0392b;">Abierto (OFF)</strong></p>
+            
+            <svg width="400" height="300" viewBox="0 0 400 300" id="circuit-svg">
+                <!-- Cable (Camino del flujo) -->
+                <path id="wire" d="M 100 200 L 100 100 L 300 100 L 300 200 L 100 200 Z" fill="none" stroke="#333" stroke-width="4"/>
+                
+                <!-- Batería -->
+                <rect x="70" y="180" width="60" height="40" rx="5" fill="#2ecc71" />
+                <text x="85" y="205" fill="white" font-weight="bold" style="font-size: 14px;">9V</text>
+
+                <!-- Interruptor -->
+                <g id="switch-group" style="cursor:pointer" onclick="toggleSwitch()">
+                    <circle cx="200" cy="100" r="5" fill="black" />
+                    <circle cx="250" cy="100" r="5" fill="black" />
+                    <line id="switch-lever" x1="200" y1="100" x2="245" y2="70" stroke="#c0392b" stroke-width="6" />
+                </g>
+
+                <!-- Bombilla -->
+                <g id="bulb-group">
+                    <circle cx="300" cy="200" r="25" fill="#bdc3c7" id="bulb-glass" />
+                    <path d="M 290 225 L 310 225 L 305 240 L 295 240 Z" fill="#7f8c8d" />
+                </g>
+            </svg>
+
+            <div class="controls">
+                <button onclick="toggleSwitch()">Accionar Interruptor</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
