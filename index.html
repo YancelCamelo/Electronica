@@ -16,6 +16,11 @@
             <li><a href="#fase3">Fase 3: Aplicación</a></li>
             <li><a href="#fase4">Fase 4: Analogía</a></li>
             <li><a href="#fase5">Fase 5: Predicción</a></li>
+            <li><a href="#tercercorte"><strong>TERCER CORTE</strong></a></li>
+            <li><a href="#unidad1">Unidad 1</a></li>
+            <li><a href="#unidad2">Unidad 2</a></li>
+            <li><a href="#unidad3">Unidad 3</a></li>
+            <li><a href="#unidad4">Unidad 4</a></li>
         </ul>
     </nav>
 
@@ -27,6 +32,7 @@
 
         <section id="fase1" class="card">
             <h2>Fase 1: Exploración de Conceptos</h2>
+            
             <div class="concept">
                 <h3>Ánodo y Cátodo</h3>
                 <p><strong>¿Qué es?</strong> El ánodo es el terminal de entrada de corriente y el cátodo el de salida.</p>
@@ -61,13 +67,13 @@
         <section id="fase3" class="card">
             <h2>Fase 3: Aplicación (El Cargador)</h2>
             <p>Al conectar un celular, el cargador transforma el voltaje de 110V/220V a 5V.</p>
-            <div class="interactive-info" id="cargador-info" style="cursor:pointer; padding: 15px; border: 1px dashed var(--primary); border-radius: 8px;">
+            <div class="interactive-info" id="cargador-info">
                 Haz clic aquí para ver qué magnitud cambia.
             </div>
         </section>
 
         <section id="fase4" class="card">
-            <h2>Fase 4: Analogía de la Tubería</h2>
+            <h2>Fase 4: Analogía de la Tubería </h2>
             <div class="analogía-container">
                 <p><strong>Voltaje:</strong> Presión del agua.</p>
                 <p><strong>Corriente:</strong> Caudal (cuánta agua pasa).</p>
@@ -76,37 +82,78 @@
         </section>
 
         <section id="fase5" class="card">
-            <h2>Fase 5: Simulación de Circuito</h2>
-            <p>Estado del circuito: <strong id="status" style="color: #c0392b;">Abierto (OFF)</strong></p>
-            
-            <svg width="400" height="300" viewBox="0 0 400 300" id="circuit-svg">
-                <!-- Cable (Camino del flujo) -->
-                <path id="wire" d="M 100 200 L 100 100 L 300 100 L 300 200 L 100 200 Z" fill="none" stroke="#333" stroke-width="4"/>
-                
-                <!-- Batería -->
-                <rect x="70" y="180" width="60" height="40" rx="5" fill="#2ecc71" />
-                <text x="85" y="205" fill="white" font-weight="bold" style="font-size: 14px;">9V</text>
-
-                <!-- Interruptor -->
-                <g id="switch-group" style="cursor:pointer" onclick="toggleSwitch()">
-                    <circle cx="200" cy="100" r="5" fill="black" />
-                    <circle cx="250" cy="100" r="5" fill="black" />
-                    <line id="switch-lever" x1="200" y1="100" x2="245" y2="70" stroke="#c0392b" stroke-width="6" />
-                </g>
-
-                <!-- Bombilla -->
-                <g id="bulb-group">
-                    <circle cx="300" cy="200" r="25" fill="#bdc3c7" id="bulb-glass" />
-                    <path d="M 290 225 L 310 225 L 305 240 L 295 240 Z" fill="#7f8c8d" />
-                </g>
-            </svg>
-
-            <div class="controls">
-                <button onclick="toggleSwitch()">Accionar Interruptor</button>
+            <h2>Fase 5: Predicción Visual </h2>
+            <p>Sentido Real (Electrones) vs Sentido Convencional.</p>
+            <div class="circuit-animation">
+                <div class="battery">Pila</div>
+                <div class="wire"></div>
+                <div class="bulb" id="bulb">💡</div>
             </div>
+            <button onclick="toggleCircuit()">Encender Circuito</button>
+        </section>
+
+        <section id="tercercorte" class="card"><h2>- TERCER CORTE -</h2></section>
+        <section id="unidad1" class="card">
+            <h2>Semiconductores</h2>
+            <p>Los <strong>semiconductores</strong> son materiales que pueden actuar como conductores de electricidad o como aislantes, dependiendo de factores como la temperatura, la presión o los campos eléctricos.
+            El ejemplo por excelencia como material semiconductor es el silicio. </p>
+            <h2>Union PN</h2>
+            <p>Una unión PN es la frontera o zona de contacto entre dos materiales semiconductores con diferentes impurezas (tipo P y tipo N). Es la estructura fundamental y el bloque de construcción básico de la electrónica moderna, permitiendo el funcionamiento de diodos, transistores, celdas solares y LED. </p>
+            <h2>Diodos</h2>
+            <p>Un diodo es un componente electrónico semiconductor que actúa como un interruptor unidireccional. Su función principal es permitir que la corriente eléctrica fluya en una sola dirección—desde el ánodo (positivo) hacia el cátodo (negativo)—y bloquearla si intenta regresar en sentido contrario.</p>
+        </section>
+
+        <section id="unidad2" class="card">
+            <h2>Unidad 2: Transistores de Unión Bipolar (BJT)</h2>
+            <article class="subtema">
+                <h3>BJT (Bipolar Junction Transistor)</h3>
+                <p>El <strong>BJT</strong> es un dispositivo electrónico semiconductor de tres terminales (emisor, base y colector) que utiliza tanto lagunas como electrones como portadores de carga. Su funcionamiento principal consiste en controlar una corriente grande a través del canal colector-emisor mediante una corriente mucho más pequeña aplicada en la base.</p>
+            </article>
+            <article class="subtema">
+                <h3>Regiones de Operación</h3>
+                <p>Las <strong>regiones de operación</strong> de un transistor BJT definen su comportamiento según la polarización de sus uniones. Estas regiones son: corte (el transistor actúa como un interruptor abierto), saturación (actúa como un interruptor cerrado con máxima conducción) y activa (utilizada principalmente para la amplificación de señales lineales).</p>
+            </article>
+            <article class="subtema">
+                <h3>Polarización</h3>
+                <p>La <strong>polarización</strong> de un BJT consiste en aplicar voltajes de corriente continua (DC) externos para establecer un punto de operación estático, conocido como punto Q. Una correcta polarización asegura que el transistor permanezca en la región de operación deseada (como la activa para amplificar) a pesar de variaciones térmicas o cambios en los componentes.</p>
+            </article>
+            <article class="subtema">
+                <h3>Conmutación</h3>
+                <p>La <strong>conmutación</strong> con transistores BJT es el proceso donde el dispositivo alterna rápidamente entre dos estados extremos: la región de corte (apagado) y la región de saturación (encendido). Este comportamiento es la base de la electrónica digital, compuertas lógicas y el control de cargas como motores o relés.</p>
+            </article>
+        </section>
+
+        <section id="unidad3" class="card">
+            <h2>Unidad 3: Transistores de Efecto de Campo y Amplificación</h2>
+            <article class="subtema">
+                <h3>FET / MOSFET</h3>
+                <p>El <strong>MOSFET</strong> (Metal-Oxide-Semiconductor Field-Effect Transistor) es un tipo de transistor FET que utiliza un campo eléctrico para controlar la conductividad de un canal de silicio. A diferencia del BJT, es un dispositivo controlado por voltaje en su terminal de compuerta (gate), lo que le otorga una impedancia de entrada extremadamente alta y una gran eficiencia.</p>
+            </article>
+            <article class="subtema">
+                <h3>Amplificadores</h3>
+                <p>Los <strong>amplificadores</strong> de señales son circuitos electrónicos diseñados para incrementar la amplitud de una señal de entrada (voltaje, corriente o potencia) sin alterar su forma. Utilizando transistores en su región lineal, permiten que variaciones pequeñas en la entrada se conviertan en variaciones mucho mayores y útiles en la salida.</p>
+            </article>
+        </section>
+
+        <section id="unidad4" class="card">
+            <h2>Unidad 4: Tiristores y Electrónica de Potencia</h2>
+            <article class="subtema">
+                <h3>SCR (Silicon Controlled Rectifier)</h3>
+                <p>El <strong>SCR</strong> o rectificador controlado de silicio es un dispositivo semiconductor de cuatro capas que funciona como un interruptor casi ideal. Una vez que recibe un pulso de corriente en su terminal de compuerta (gate), se dispara y conduce corriente de manera unidireccional (del ánodo al cátodo) hasta que dicha corriente cae por debajo de un nivel mínimo.</p>
+            </article>
+            <article class="subtema">
+                <h3>TRIAC (Triode for Alternating Current)</h3>
+                <p>El <strong>TRIAC</strong> es un dispositivo semiconductor bidireccional de la familia de los tiristores. Puede considerarse como dos SCR conectados en paralelo inverso con una compuerta común, lo que le permite controlar el flujo de corriente alterna (AC) en ambos ciclos de la onda, siendo ideal para reguladores de luz y velocidad de motores domésticos.</p>
+            </article>
+            <article class="subtema">
+                <h3>Electrónica de Potencia</h3>
+                <p>La <strong>electrónica de potencia</strong> es la rama de la ingeniería eléctrica que se encarga del procesamiento, control y conversión de la energía eléctrica mediante dispositivos semiconductores operando en conmutación. Su objetivo es adaptar el voltaje y la corriente para alimentar de forma eficiente sistemas de alta energía industriales y comerciales.</p>
+            </article>
         </section>
     </main>
-
+    <footer>
+        <p>Yancel Ramit Camelo Acuña - 2026</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
